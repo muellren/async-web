@@ -1,0 +1,14 @@
+{
+  "name": "node-client",
+  "version": "1.0.0",
+  "description": "Node Client",
+  "main": "client-callbacks.js",
+  "scripts": {
+    "lint": "npx eslint --ext .js ."
+  },
+  "author": "Rene Mueller",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.19.0"
+  }
+}
