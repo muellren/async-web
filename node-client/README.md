@@ -71,7 +71,7 @@ order requests processed simultaneously.
 Asynchronous functions and await improve the readability of the code.
 It does away with the parentheses hell of callbacks and improves the code
 legibility over Promises. Async functions are based on generator functions
-that yield promises.
+that yield Promises.
 
 [client-async.js](client-async.js):
 
