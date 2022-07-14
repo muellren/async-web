@@ -7,6 +7,7 @@ DATE_FORMAT = '%Y-%m-%d'
 
 app = Flask(__name__)
 
+
 @app.route('/user/<int:userid>', methods=['GET'])
 def get_user_profile(userid):
     random = Random(0xdeadbeef * userid)
@@ -16,8 +17,10 @@ def get_user_profile(userid):
 
     return {
         'userid': userid,
-        'dob': fake.date_of_birth(minimum_age=18, maximum_age=92).strftime(DATE_FORMAT),
-        'joined': fake.date_of_birth(minimum_age=0, maximum_age=10).strftime(DATE_FORMAT),
+        'dob': fake.date_of_birth(
+            minimum_age=18, maximum_age=92).strftime(DATE_FORMAT),
+        'joined': fake.date_of_birth(
+            minimum_age=0, maximum_age=10).strftime(DATE_FORMAT),
         'name': fake.name(),
         'email': fake.email(),
         'street': fake.street_address(),
@@ -32,7 +35,7 @@ def get_user_profile(userid):
 def get_orders():
     userid = int(request.args.get('by'))
     if userid is None:
-      abort(400)
+        abort(400)
 
     limit = int(request.args.get('limit', '5'))
 
