@@ -1,6 +1,7 @@
 # Asynchronous Web Requests
 
 - [C# Client](cs-client/)
+- [Go Client](go-client/)
 - [Kotlin Client](kotlin-client/)
 - [JavaScript Client](node-client/)
 - [Python Client](python-client/)
